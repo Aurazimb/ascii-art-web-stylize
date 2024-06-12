@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index/style.css">
+    <title>ASCII-ART Generator</title>
+</head>
+<body>
+    <div id="container">
+        <div id="ascii-logo-container">
+            <img src="../index/image.png" alt="ASCII-ART">
+        </div>
+        <div id="input-container">
+            <label for="ascii-input">Введите текст:</label>
+            <form action="/ascii-art" method="post">
+                <textarea name="asciiInput" id="asciiInput" placeholder="Введите текст" class="larger-input"></textarea>
+                <br>
+                <div class="button-container">
+                    <select name="style-selector" id="style-selector">
+                        <option value="standard">Standard</option>
+                        <option value="shadow">Shadow</option>
+                        <option value="thinkertoy">Thinkertoy</option>
+                    </select>
+                    <input class="gen" type="submit" value="Generate Ascii Art">
+                </div>
+            </form>
+        </div>
+
+        <div id="output-container">
+            <label for="ascii-output">ASCII-ART:</label>
+            <pre id="ascii-output" class="output">{{.Art}}</pre>
+        </div>
+    </div>
+</body>
+</html>
